@@ -1,0 +1,36 @@
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+
+    li {
+        display: inline;
+        font-size: 18px;
+    }
+
+    li + li:before{
+        color: black;
+        padding: 8px;
+        content: "/\00a0";
+    }
+}
+
+ul.breadcrumb.arrow{
+    padding: 10px 16px;
+    list-style: none;
+
+    li {
+        display: inline;
+        font-size: 18px;
+    }
+
+    li + li:before{
+        color: black;
+        padding: 8px;
+        content: "/\00a0";
+    }
+}
+
+
+.active {
+    color: black;
+}

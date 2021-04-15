@@ -1,0 +1,59 @@
+@import "color";
+@import "font";
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 390%;
+}
+h2{
+    font-size: 380%;
+}
+
+h3{
+    font-size: 340%;
+}
+h4{
+    font-size: 310%;
+}
+h5{
+    font-size: 280%;
+}
+h6{
+    font-size: 240%;
+}
+
+
+a {
+   text-decoration: none;
+   color:  #34aeeb;
+   &:hover {
+      color: #3492eb;
+   }
+}
+
+@each $name,$value in $theme-colors {
+    .text-#{$name}{
+        color: $value;
+    }
+}
+
+@each $name,$value in $font-family {
+    .text-#{$name}{
+      font-family: #{$value}
+    }
+}
+
+@each $name,$value in $font-style {
+    .text-#{$name}{
+       font-style: $value
+    }
+}
+
+@each $name,$value in $theme-colors {
+    .bg-#{$name}{
+        background-color: $value;
+    }
+}

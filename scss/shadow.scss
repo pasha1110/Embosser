@@ -1,0 +1,15 @@
+@import "color";
+
+$default-shadow: 0px 0px 20px;
+@each $name,$value in $theme-colors {
+    $shadow-variant: (
+        "default": $default-shadow grey,
+        $name : $default-shadow $value,
+    );
+    
+    @each $sname,$svalue in $shadow-variant {
+         .box-shadow-#{$sname}{
+              box-shadow: $svalue
+         }
+    }
+}

@@ -1,0 +1,11 @@
+input {
+    width: 200px;
+    height: 35px;
+    border: 2px solid #34aeeb;
+    border-radius: 5px;
+    appearance: none;
+    &:focus{
+        -webkit-appearance: none;
+        box-shadow: 0px 0px 5px  #34aeeb;
+    }
+}

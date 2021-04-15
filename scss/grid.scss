@@ -1,0 +1,67 @@
+$no-of-columns: 12;
+[class*="col-"]{
+    float: left;
+}
+ 
+
+.nest {
+    padding: 3rem;
+    margin-bottom: 1cm;
+}
+.container{
+   display: block;
+   width: 100%;
+   max-width: 1170px;
+  
+   padding: 0px 1rem;
+   margin: 0px auto;
+ 
+   &-fluid{
+       display: flex;
+       flex-direction: column;
+  
+       width: 100%;
+      
+       padding: 1rem 0px;
+   }
+}
+@function add($num){
+    $newNum: $num + 8.33;
+    @return $newNum
+}
+
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.row{
+   display: flex;
+   flex-direction: row;
+   order: 5;
+}
+
+@media screen and (max-width: 600px){
+    .row {
+        flex-direction: column;
+    }
+
+    [class*="col-"]{
+        display: block;
+    }
+}
+
+@for $pad from 1 through 5 {
+    .p-#{$pad}{
+        padding: #{$pad / 10}rem;
+    }
+}
